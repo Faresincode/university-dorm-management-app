@@ -4,163 +4,6 @@ The **Dormitory Management System** is a powerful C++ console-based application 
 
 ## Features
 
-Below is a detailed breakdown of all features, organized in tables for clarity, including each management screen and its options. The application uses structured data handling and a user-friendly interface to manage dormitory operations efficiently.
-
-| **Feature Category** | **Description** | **Key Details** | **Related Screen** | **Data File** |
-|----------------------|-----------------|-----------------|---------------------|---------------|
-| **Student Management** | Manage student records, academic details, complaints, and check-in/check-out dates. | - Add, update, view records<br>- Track university, faculty, dept, year, section<br>- Status: Checked_out, Active, Suspended, Transferred, Pending, NoStatus<br>- Meal plans: NoMeal, Full, Half | Update Dorm Student Screen | `StudentsDormData.txt`, `StudentsDormComplaints.txt` |
-| **Employee Management** | Handle employee details, shifts, and security assignments. | - Add, update, view records<br>- Track residence, dept, job title, salary, shift, status | Update Employee Info Screen | `DormEmployeeData.txt`, `ShiftsSchedulesData.txt`, `SecuritiesData.txt` |
-| **Visitor Tracking** | Log and track visitor information, filter by name/dept/date. | - Add, update, view records<br>- Track purpose, dept, room, status (Inside/Exited), visit/exit times | Update Visitor Information Screen, Visitor Log List Screen | `VisitorsData.txt` |
-| **Patrol Scheduling** | Manage security patrol schedules and filter completed patrols. | - Add, view schedules<br>- Track patrol ID, security ID, location, start/end times, status | View All Patrol Schedules Screen, View Patrol Logs Screen | `PatrolSchedules.txt` |
-| **Incident Reporting** | Record and manage incident reports with severity and status. | - Add, update, view reports<br>- Severity: Low, Medium, High<br>- Status: Open, In Progress, Resolved, Closed | Update Incident Screen | `IncidentReports.txt` |
-| **Maintenance Requests** | Track maintenance requests with priority and status. | - Add, update, view requests<br>- Track dorm, room, issue type, priority, assigned staff, date | View All Requests Screen | `MaintenanceRequests.txt` |
-| **Login System** | Role-based access with session tracking. | - Roles: admin, securitychief, financemanager, etc.<br>- Track login sessions | N/A | `LoginData.txt`, `RegisterLogins.txt` |
-| **Payment Management** | Record and track payment details. | - Track payment ID, dorm ID, date, amount, purpose, status, method | N/A | `DormPaymentsData.txt` |
-| **Room Management** | Manage room assignments and details. | - Track dorm, floor, room number, capacity, occupants, status | N/A | `RoomsData.txt` |
-| **Utility Features** | Support functions for ID generation, validation, and UI. | - Random ID generation<br>- Input validation for strings, numbers, enums<br>- Color-coded UI (Green, White, Blue, Yellow, Red)<br>- File operations<br>- Screen reset | N/A | N/A |
-
-## Screen Structure
-
-The application uses a menu-driven interface with screens inheriting from `clsBase` for consistent headers and navigation. Each screen is detailed below with its purpose, menu options, and features, presented in a structured table format.
-
-| **Screen Name** | **File** | **Purpose** | **Menu Options** | **Features** |
-|------------------|----------|-------------|------------------|--------------|
-| **Update Visitor Information** | `clsUpdateVisitorInfoScreen.h` | Update visitor records by ID | 1. First Name<br>2. Last Name<br>3. Visit Purpose<br>4. Visited Department<br>5. Visited Room<br>6. Visitor Status (Inside/Exited)<br>7. Update All | - Validates visitor ID<br>- Selective/full updates<br>- "skip" option to retain data<br>- Saves to `VisitorsData.txt` |
-| **Update Dorm Student** | `clsUpdateDormStudentScreen.h` | Update student dormitory records by ID | 1. Dorm Building<br>2. Room Number<br>3. Bed Number<br>4. Status (Checked_out, Active, Suspended, Transferred, Pending, NoStatus)<br>5. Meal Plan (NoMeal, Full, Half)<br>6. Update All | - Validates student ID<br>- "skip" option<br>- Saves to `StudentsDormData.txt` |
-| **Update Employee Info** | `clsUpdateEmployeeInfoScreen.h` | Update employee records by ID | 1. Residence Name<br>2. Residence Department<br>3. Job Title<br>4. Salary<br>5. Shift<br>6. Status<br>7. Update All | - Validates employee ID<br>- Saves to `DormEmployeeData.txt` |
-| **Update Incident** | `clsUpdateIncidentScreen.h` | Update incident reports by ID | 1. Incident Type<br>2. Description<br>3. Severity (Low, Medium, High)<br>4. Status (Open, In Progress, Resolved, Closed)<br>5. Security ID<br>6. Update All<br>7. Exit | - Validates incident ID<br>- Saves to `IncidentReports.txt` |
-| **View All Patrol Schedules** | `clsViewAllPatrolSchedulesScreen.h` | Display all patrol schedules | N/A (Table Display) | - Columns: Patrol ID, Security ID, Start Time, End Time, Patrol Status, Location<br>- Loads from `PatrolSchedules.txt`<br>- Color-coded table |
-| **View Patrol Logs** | `clsViewPatrolLogsScreen.h` | Display all and completed patrol logs | N/A (Table Display) | - Same columns as Patrol Schedules<br>- Filters completed patrols<br>- Loads from `PatrolSchedules.txt` |
-| **View All Requests** | `clsViewAllRequestsScreen.h` | Display all maintenance requests | N/A (Table Display) | - Columns: Request ID, Dorm Building, Room, Issue Type, Priority, Status, Assigned Staff ID, Request Date<br>- Loads from `MaintenanceRequests.txt`<br>- Color-coded table |
-| **Visitor Log List** | `clsVisitorLogListScreen.h` | Display all visitor logs | N/A (Table Display) | - Columns: Visitor ID, Full Name, Visit Purpose, Department, Room, Status, Visit Time, Exit Time<br>- Loads from `VisitorsData.txt`<br>- Color-coded table |
-
-## System Requirements
-| **Requirement** | **Details** |
-|-----------------|-------------|
-| Operating System | Windows, Linux, macOS |
-| Compiler | C++11 or later (e.g., g++, MSVC) |
-| Dependencies | Standard C++ libraries (`iostream`, `vector`, `fstream`, `iomanip`, etc.) |
-| Disk Space | Minimal (text-based data files) |
-| Console/Terminal | Required for running the application |
-
-
-
-
-dormitory-management-system/
-│
-├── *.h                # Header files (e.g., clsVisitor.h)
-├── *.cpp              # Source files for implementation
-├── *.txt              # Data files (e.g., StudentsDormData.txt)
-├── README.md          # This file
-
-Dormitory Management System
-├── Header Files (Classes and Utilities)
-│   ├── clsBase.h
-│   │   └── Purpose: Base class for all screens, providing consistent header display
-│   │       ├── ShowHeader(): Displays screen title with color formatting
-│   ├── clsInputValidate.h
-│   │   └── Purpose: Validates user inputs for data integrity
-│   │       ├── ReadString(): Reads and validates string input
-│   │       ├── ReadNumber(): Reads and validates numeric input
-│   │       ├── ReadNumberInRange(): Ensures number is within a specified range
-│   │       ├── ReadEnum(): Validates enum inputs (e.g., status, meal plan)
-│   ├── clsString.h
-│   │   └── Purpose: Handles string operations for file parsing
-│   │       ├── Split(): Splits strings by #//# delimiter
-│   │       ├── Join(): Combines strings with #//# delimiter
-│   │       ├── Trim(): Removes leading/trailing whitespace
-│   ├── clsUtil.h
-│   │   └── Purpose: Provides utility functions for random IDs, file I/O, and console formatting
-│   │       ├── GenerateRandomID(): Creates unique IDs
-│   │       ├── ReadFileLines(): Reads text file into vector
-│   │       ├── WriteFileLines(): Writes vector to text file
-│   │       ├── ResetScreen(): Clears console and sets default colors
-│   │       ├── SetColor(): Applies color to console output (Green, White, Blue, Yellow, Red)
-│   ├── clsVisitor.h
-│   │   └── Purpose: Manages visitor data and operations
-│   │       ├── SetFirstName(), GetFirstName(): Manage first name
-│   │       ├── SetLastName(), GetLastName(): Manage last name
-│   │       ├── SetVisitPurpose(), GetVisitPurpose(): Manage visit purpose
-│   │       ├── SetVisitedDepartment(), GetVisitedDepartment(): Manage department
-│   │       ├── SetVisitedRoom(), GetVisitedRoom(): Manage room number
-│   │       ├── SetVisitorStatus(), GetVisitorStatus(): Manage status (Inside/Exited)
-│   │       ├── SetVisitTime(), GetVisitTime(): Manage visit timestamp
-│   │       ├── SetExitTime(), GetExitTime(): Manage exit timestamp
-│   │       ├── Save(): Saves visitor data to VisitorsData.txt
-│   │       ├── Find(): Retrieves visitor by ID
-│   ├── clsUpdateVisitorInfoScreen.h
-│   │   └── Purpose: Updates visitor records via menu
-│   │       ├── ShowUpdateVisitorScreen(): Displays menu for updating visitor details
-│   │       ├── UpdateField(): Updates specific field with validation
-│   │       ├── UpdateAll(): Updates all fields
-│   ├── clsUpdateDormStudentScreen.h
-│   │   └── Purpose: Updates student dormitory records via menu
-│   │       ├── ShowUpdateDormStudentScreen(): Displays menu for updating student details
-│   │       ├── UpdateField(): Updates specific field (e.g., dorm, room, status)
-│   │       ├── UpdateAll(): Updates all fields
-│   ├── clsUpdateEmployeeInfoScreen.h
-│   │   └── Purpose: Updates employee records via menu
-│   │       ├── ShowUpdateEmployeeScreen(): Displays menu for updating employee details
-│   │       ├── UpdateField(): Updates specific field (e.g., job title, salary)
-│   │       ├── UpdateAll(): Updates all fields
-│   ├── clsUpdateIncidentScreen.h
-│   │   └── Purpose: Updates incident reports via menu
-│   │       ├── ShowUpdateIncidentScreen(): Displays menu for updating incident details
-│   │       ├── UpdateField(): Updates specific field (e.g., type, severity)
-│   │       ├── UpdateAll(): Updates all fields
-│   ├── clsViewAllPatrolSchedulesScreen.h
-│   │   └── Purpose: Displays all patrol schedules in a table
-│   │       ├── ShowPatrolSchedulesScreen(): Loads and displays data from PatrolSchedules.txt
-│   │       ├── PrintTable(): Formats table with color-coded headers
-│   ├── clsViewPatrolLogsScreen.h
-│   │   └── Purpose: Displays all and completed patrol logs
-│   │       ├── ShowPatrolLogsScreen(): Displays all patrols
-│   │       ├── ShowCompletedPatrols(): Filters and displays completed patrols
-│   │       ├── PrintTable(): Reuses table formatting
-│   ├── clsViewAllRequestsScreen.h
-│   │   └── Purpose: Displays all maintenance requests in a table
-│   │       ├── ShowRequestsScreen(): Loads and displays data from MaintenanceRequests.txt
-│   │       ├── PrintTable(): Formats table with color-coded headers
-│   ├── clsVisitorLogListScreen.h
-│   │   └── Purpose: Displays all visitor logs in a table
-│   │       ├── ShowVisitorLogListScreen(): Loads and displays data from VisitorsData.txt
-│   │       ├── PrintTable(): Formats table with color-coded headers
-│   ├── clsLogin.h
-│   │   └── Purpose: Manages user login and authentication
-│   │       ├── Find(): Authenticates user by username and password
-│   │       ├── SaveLoginSession(): Logs session to RegisterLogins.txt
-│   ├── Global.h
-│   │   └── Purpose: Defines global constants and color codes
-│   │       ├── Colors: Green, White, Blue, Yellow, Red
-│   ├── GlobalLogin.h
-│   │   └── Purpose: Tracks current logged-in user
-│   │       ├── CurrentUser: Global clsLogin object
-│
-├── Source Files
-│   └── *.cpp: Implementation of classes and main program logic
-│       ├── main.cpp: Entry point, initializes main menu
-│       ├── Other *.cpp: Implement respective header file functions
-│
-├── Data Files
-│   ├── StudentsDormData.txt: Student records (ID, name, dorm, room, bed, status, meal plan, etc.)
-│   ├── DormEmployeeData.txt: Employee records (ID, residence, dept, job title, salary, shift, status)
-│   ├── VisitorsData.txt: Visitor logs (ID, name, purpose, dept, room, status, times)
-│   ├── PatrolSchedules.txt: Patrol schedules (ID, security ID, location, start/end times, status)
-│   ├── IncidentReports.txt: Incident reports (ID, type, description, severity, status, security ID, date)
-│   ├── MaintenanceRequests.txt: Maintenance requests (ID, dorm, room, issue type, priority, status, staff, date)
-│   ├── LoginData.txt: User credentials (username, password, role ID)
-│   ├── RegisterLogins.txt: Login session logs (timestamp, username, password, role ID, logout time)
-│   ├── StudentsDormComplaints.txt: Student complaints (ID, dorm ID, date, room, issue, priority, status)
-│   ├── RoomsData.txt: Room details (dorm, floor, room number, capacity, occupants, status)
-│   ├── ShiftsSchedulesData.txt: Employee shift schedules (employee ID, residence, shift, date)
-│   ├── SecuritiesData.txt: Security personnel assignments (ID, employee ID, building, status, supervisor ID, date)
-│   ├── DormPaymentsData.txt: Payment records (ID, dorm ID, date, amount, purpose, status, method)
-│
-└── README.md: This file
-
-
-## Features
-
 The following tables detail all features, including management screens, their menu options, and associated functions, ensuring a comprehensive overview of the application's capabilities.
 
 | **Feature Category** | **Description** | **Key Functions** | **Related Screen** | **Data File** |
@@ -192,5 +35,349 @@ Each screen is a class inheriting from `clsBase`, providing a consistent interfa
 | **Visitor Log List** | `clsVisitorLogListScreen.h` | Display all visitor logs | N/A (Table Display) | - ShowVisitorLogListScreen(): Loads data<br>- PrintTable(): Formats table (Visitor ID, Name, Purpose, Dept, Room, Status, Visit/Exit Time) |
 
 
+# Dormitory Management System
+
+## Application Structure (Tree)
+
+```plaintext
+Dormitory Management System
+├── Header Files (Classes and Utilities)
+│   ├── clsBase.h
+│   │   └── ShowHeader(): Displays screen title with color formatting
+│   ├── clsInputValidate.h
+│   │   ├── ReadString(): Reads and validates string input
+│   │   ├── ReadNumber(): Reads and validates numeric input
+│   │   ├── ReadNumberInRange(): Ensures number within range
+│   │   ├── ReadEnum(): Validates enum inputs (e.g., status, meal plan)
+│   ├── clsString.h
+│   │   ├── Split(): Splits strings by `#//#` delimiter
+│   │   ├── Join(): Combines strings with `#//#` delimiter
+│   │   ├── Trim(): Removes leading/trailing whitespace
+│   ├── clsUtil.h
+│   │   ├── GenerateRandomID(): Creates unique IDs
+│   │   ├── ReadFileLines(): Reads text file into vector
+│   │   ├── WriteFileLines(): Writes vector to text file
+│   │   ├── ResetScreen(): Clears console and sets default colors
+│   │   ├── SetColor(): Applies color to console output (Green, White, Blue, Yellow, Red)
+│   ├── clsVisitor.h
+│   │   ├── SetFirstName(), GetFirstName(): Manage first name
+│   │   ├── SetLastName(), GetLastName(): Manage last name
+│   │   ├── SetVisitPurpose(), GetVisitPurpose(): Manage visit purpose
+│   │   ├── SetVisitedDepartment(), GetVisitedDepartment(): Manage department
+│   │   ├── SetVisitedRoom(), GetVisitedRoom(): Manage room number
+│   │   ├── SetVisitorStatus(), GetVisitorStatus(): Manage status (Inside/Exited)
+│   │   ├── SetVisitTime(), GetVisitTime(): Manage visit timestamp
+│   │   ├── SetExitTime(), GetExitTime(): Manage exit timestamp
+│   │   ├── Save(): Saves visitor data
+│   │   ├── Find(): Retrieves visitor by ID
+│   │   ├── FilterByName(): Filters visitors by name
+│   │   ├── FilterByDepartment(): Filters by department
+│   │   ├── FilterByDate(): Filters by visit date
+│   ├── clsUpdateVisitorInfoScreen.h
+│   │   ├── ShowUpdateVisitorScreen(): Displays update menu
+│   │   ├── UpdateField(): Updates specific field
+│   │   ├── UpdateAll(): Updates all fields
+│   ├── clsUpdateDormStudentScreen.h
+│   │   ├── ShowUpdateDormStudentScreen(): Displays update menu
+│   │   ├── UpdateField(): Updates specific field
+│   │   ├── UpdateAll(): Updates all fields
+│   ├── clsUpdateEmployeeInfoScreen.h
+│   │   ├── ShowUpdateEmployeeScreen(): Displays update menu
+│   │   ├── UpdateField(): Updates specific field
+│   │   ├── UpdateAll(): Updates all fields
+│   ├── clsUpdateIncidentScreen.h
+│   │   ├── ShowUpdateIncidentScreen(): Displays update menu
+│   │   ├── UpdateField(): Updates specific field
+│   │   ├── UpdateAll(): Updates all fields
+│   ├── clsViewAllPatrolSchedulesScreen.h
+│   │   ├── ShowPatrolSchedulesScreen(): Displays all schedules
+│   │   ├── PrintTable(): Formats table with headers
+│   ├── clsViewPatrolLogsScreen.h
+│   │   ├── ShowPatrolLogsScreen(): Displays all patrols
+│   │   ├── ShowCompletedPatrols(): Filters completed patrols
+│   │   ├── PrintTable(): Formats table
+│   ├── clsViewAllRequestsScreen.h
+│   │   ├── ShowRequestsScreen(): Displays all requests
+│   │   ├── PrintTable(): Formats table with headers
+│   ├── clsVisitorLogListScreen.h
+│   │   ├── ShowVisitorLogListScreen(): Displays all visitor logs
+│   │   ├── PrintTable(): Formats table with headers
+│   ├── clsLogin.h
+│   │   ├── Find(): Authenticates user
+│   │   ├── SaveLoginSession(): Logs session
+│   ├── Global.h
+│   │   ├── Colors: Defines Green, White, Blue, Yellow, Red
+│   ├── GlobalLogin.h
+│   │   ├── CurrentUser: Tracks current logged-in user
+├── Source Files
+│   ├── main.cpp: Entry point, initializes main menu
+│   ├── Other *.cpp: Implement header file functions
+├── Data Files
+│   ├── StudentsDormData.txt: Student records (ID, name, dorm, room, bed, status, meal plan, academic details)
+│   ├── DormEmployeeData.txt: Employee records (ID, residence, dept, job title, salary, shift, status)
+│   ├── VisitorsData.txt: Visitor logs (ID, name, purpose, dept, room, status, times)
+│   ├── PatrolSchedules.txt: Patrol schedules (ID, security ID, location, start/end times, status)
+│   ├── IncidentReports.txt: Incident reports (ID, type, description, severity, status, security ID, date)
+│   ├── MaintenanceRequests.txt: Maintenance requests (ID, dorm, room, issue type, priority, status, staff, date)
+│   ├── LoginData.txt: User credentials (username, password, role ID)
+│   ├── RegisterLogins.txt: Login sessions (timestamp, username, password, role ID, logout time)
+│   ├── StudentsDormComplaints.txt: Complaints (ID, dorm ID, date, room, issue, priority, status)
+│   ├── RoomsData.txt: Room details (dorm, floor, room number, capacity, occupants, status)
+│   ├── ShiftsSchedulesData.txt: Shift schedules (employee ID, residence, shift, date)
+│   ├── SecuritiesData.txt: Security assignments (ID, employee ID, building, status, supervisor ID, date)
+│   ├── DormPaymentsData.txt: Payments (ID, dorm ID, date, amount, purpose, status, method)
+└── README.md
+
+
+Main Menu
+├── [1] Update Visitor Information
+│   ├── Features: Update visitor records by ID
+│   │   ├── Sub-Features
+│   │   │   ├── Update First Name
+│   │   │   ├── Update Last Name
+│   │   │   ├── Update Visit Purpose (e.g., Meeting, Delivery, Interview)
+│   │   │   ├── Update Visited Department (e.g., Administration, HR)
+│   │   │   ├── Update Visited Room
+│   │   │   ├── Update Visitor Status (Inside, Exited)
+│   │   │   ├── Update All Fields
+│   │   ├── Functions
+│   │   │   ├── ShowUpdateVisitorScreen(): Displays menu (clsUpdateVisitorInfoScreen.h)
+│   │   │   ├── UpdateField(): Updates specific field
+│   │   │   ├── UpdateAll(): Updates all fields
+│   │   │   ├── Save(): Writes to VisitorsData.txt (clsVisitor.h)
+│   │   │   ├── Find(): Validates visitor ID (clsVisitor.h)
+│   │   ├── Validation: Checks ID existence, valid inputs via clsInputValidate
+│   │   ├── File: VisitorsData.txt
+├── [2] Update Dorm Student
+│   ├── Features: Update student dormitory records by ID
+│   │   ├── Sub-Features
+│   │   │   ├── Update Dorm Building (e.g., OceanView, CoralBay)
+│   │   │   ├── Update Room Number
+│   │   │   ├── Update Bed Number
+│   │   │   ├── Update Status (Checked_out, Active, Suspended, Transferred, Pending, NoStatus)
+│   │   │   ├── Update Meal Plan (NoMeal, Full, Half)
+│   │   │   ├── Update All Fields
+│   │   ├── Functions
+│   │   │   ├── ShowUpdateDormStudentScreen(): Displays menu (clsUpdateDormStudentScreen.h)
+│   │   │   ├── UpdateField(): Updates specific field
+│   │   │   ├── UpdateAll(): Updates all fields
+│   │   │   ├── Save(): Writes to StudentsDormData.txt
+│   │   │   ├── Find(): Validates student ID
+│   │   ├── Validation: Checks ID, uses "skip" to retain data (clsInputValidate)
+│   │   ├── File: StudentsDormData.txt
+├── [3] Update Employee Info
+│   ├── Features: Update employee records by ID
+│   │   ├── Sub-Features
+│   │   │   ├── Update Residence Name (e.g., OceanView, Seaside)
+│   │   │   ├── Update Residence Department (e.g., Maintenance, Security)
+│   │   │   ├── Update Job Title (e.g., Security Supervisor, Cleaner)
+│   │   │   ├── Update Salary
+│   │   │   ├── Update Shift
+│   │   │   ├── Update Status (Active, Inactive)
+│   │   │   ├── Update All Fields
+│   │   ├── Functions
+│   │   │   ├── ShowUpdateEmployeeScreen(): Displays menu (clsUpdateEmployeeInfoScreen.h)
+│   │   │   ├── UpdateField(): Updates specific field
+│   │   │   ├── UpdateAll(): Updates all fields
+│   │   │   ├── Save(): Writes to DormEmployeeData.txt
+│   │   │   ├── Find(): Validates employee ID
+│   │   ├── Validation: Checks ID, valid inputs (clsInputValidate)
+│   │   ├── File: DormEmployeeData.txt
+├── [4] Update Incident
+│   ├── Features: Update incident reports by ID
+│   │   ├── Sub-Features
+│   │   │   ├── Update Incident Type (e.g., Unauthorized Access, Fire Alarm)
+│   │   │   ├── Update Description
+│   │   │   ├── Update Severity (Low, Medium, High)
+│   │   │   ├── Update Status (Open, In Progress, Resolved, Closed)
+│   │   │   ├── Update Security ID
+│   │   │   ├── Update All Fields
+│   │   │   ├── Exit
+│   │   ├── Functions
+│   │   │   ├── ShowUpdateIncidentScreen(): Displays menu (clsUpdateIncidentScreen.h)
+│   │   │   ├── UpdateField(): Updates specific field
+│   │   │   ├── UpdateAll(): Updates all fields
+│   │   │   ├── Save(): Writes to IncidentReports.txt
+│   │   │   ├── Find(): Validates incident ID
+│   │   ├── Validation: Checks ID, valid inputs (clsInputValidate)
+│   │   ├── File: IncidentReports.txt
+├── [5] View All Patrol Schedules
+│   ├── Features: Display all patrol schedules in a table
+│   │   ├── Sub-Features
+│   │   │   ├── View Patrol ID
+│   │   │   ├── View Security ID
+│   │   │   ├── View Start Time
+│   │   │   ├── View End Time
+│   │   │   ├── View Patrol Status (Scheduled, In Progress, Completed, Cancelled)
+│   │   │   ├── View Patrol Location
+│   │   ├── Functions
+│   │   │   ├── ShowPatrolSchedulesScreen(): Loads data (clsViewAllPatrolSchedulesScreen.h)
+│   │   │   ├── PrintTable(): Formats table with color-coded headers
+│   │   ├── File: PatrolSchedules.txt
+├── [6] View Patrol Logs
+│   ├── Features: Display all and completed patrol logs
+│   │   ├── Sub-Features
+│   │   │   ├── View All Patrols (same columns as schedules)
+│   │   │   ├── View Completed Patrols Only
+│   │   ├── Functions
+│   │   │   ├── ShowPatrolLogsScreen(): Displays all patrols (clsViewPatrolLogsScreen.h)
+│   │   │   ├── ShowCompletedPatrols(): Filters completed patrols
+│   │   │   ├── PrintTable(): Formats table
+│   │   ├── File: PatrolSchedules.txt
+├── [7] View All Requests
+│   ├── Features: Display all maintenance requests in a table
+│   │   ├── Sub-Features
+│   │   │   ├── View Request ID
+│   │   │   ├── View Dorm Building
+│   │   │   ├── View Room
+│   │   │   ├── View Issue Type
+│   │   │   ├── View Priority
+│   │   │   ├── View Status
+│   │   │   ├── View Assigned Staff ID
+│   │   │   ├── View Request Date
+│   │   ├── Functions
+│   │   │   ├── ShowRequestsScreen(): Loads data (clsViewAllRequestsScreen.h)
+│   │   │   ├── PrintTable(): Formats table with color-coded headers
+│   │   ├── File: MaintenanceRequests.txt
+├── [8] View Visitor Log List
+│   ├── Features: Display all visitor logs in a table
+│   │   ├── Sub-Features
+│   │   │   ├── View Visitor ID
+│   │   │   ├── View Full Name
+│   │   │   ├── View Visit Purpose
+│   │   │   ├── View Department
+│   │   │   ├── View Room
+│   │   │   ├── View Status
+│   │   │   ├── View Visit Time
+│   │   │   ├── View Exit Time
+│   │   ├── Functions
+│   │   │   ├── ShowVisitorLogListScreen(): Loads data (clsVisitorLogListScreen.h)
+│   │   │   ├── PrintTable(): Formats table with color-coded headers
+│   │   ├── File: VisitorsData.txt
+├── [9] Add New Student
+│   ├── Features: Create new student record
+│   │   ├── Sub-Features
+│   │   │   ├── Set ID, Name, Contact Details
+│   │   │   ├── Set Dorm Building, Room, Bed
+│   │   │   ├── Set Status, Meal Plan
+│   │   │   ├── Set Academic Details (university, faculty, dept, year, section)
+│   │   │   ├── Set Check-In/Check-Out Dates
+│   │   ├── Functions
+│   │   │   ├── AddStudent(): Creates record
+│   │   │   ├── Save(): Writes to StudentsDormData.txt
+│   │   │   ├── GenerateRandomID(): Creates unique ID (clsUtil.h)
+│   │   ├── Validation: Ensures unique ID, valid inputs (clsInputValidate)
+│   │   ├── File: StudentsDormData.txt
+├── [10] Add New Employee
+│   ├── Features: Create new employee record
+│   │   ├── Sub-Features
+│   │   │   ├── Set ID, Name, Contact Details
+│   │   │   ├── Set Residence, Department, Job Title
+│   │   │   ├── Set Salary, Shift, Status
+│   │   ├── Functions
+│   │   │   ├── AddEmployee(): Creates record
+│   │   │   ├── Save(): Writes to DormEmployeeData.txt
+│   │   │   ├── GenerateRandomID(): Creates unique ID (clsUtil.h)
+│   │   ├── Validation: Ensures unique ID, valid inputs (clsInputValidate)
+│   │   ├── File: DormEmployeeData.txt
+├── [11] Add New Visitor
+│   ├── Features: Create new visitor record
+│   │   ├── Sub-Features
+│   │   │   ├── Set ID, Name
+│   │   │   ├── Set Visit Purpose, Department, Room
+│   │   │   ├── Set Status, Visit/Exit Times
+│   │   ├── Functions
+│   │   │   ├── AddVisitor(): Creates record (clsVisitor.h)
+│   │   │   ├── Save(): Writes to VisitorsData.txt
+│   │   │   ├── GenerateRandomID(): Creates unique ID (clsUtil.h)
+│   │   ├── Validation: Ensures unique ID, valid inputs (clsInputValidate)
+│   │   ├── File: VisitorsData.txt
+├── [12] Add New Incident
+│   ├── Features: Create new incident report
+│   │   ├── Sub-Features
+│   │   │   ├── Set ID, Type, Description
+│   │   │   ├── Set Severity, Status, Security ID
+│   │   │   ├── Set Date
+│   │   ├── Functions
+│   │   │   ├── AddIncident(): Creates report
+│   │   │   ├── Save(): Writes to IncidentReports.txt
+│   │   │   ├── GenerateRandomID(): Creates unique ID (clsUtil.h)
+│   │   ├── Validation: Ensures unique ID, valid inputs (clsInputValidate)
+│   │   ├── File: IncidentReports.txt
+├── [13] Add New Maintenance Request
+│   ├── Features: Create new maintenance request
+│   │   ├── Sub-Features
+│   │   │   ├── Set ID, Dorm Building, Room
+│   │   │   ├── Set Issue Type, Priority, Status
+│   │   │   ├── Set Assigned Staff ID, Request Date
+│   │   ├── Functions
+│   │   │   ├── AddRequest(): Creates request
+│   │   │   ├── Save(): Writes to MaintenanceRequests.txt
+│   │   │   ├── GenerateRandomID(): Creates unique ID (clsUtil.h)
+│   │   ├── Validation: Ensures unique ID, valid inputs (clsInputValidate)
+│   │   ├── File: MaintenanceRequests.txt
+├── [14] Add New Payment
+│   ├── Features: Record new payment
+│   │   ├── Sub-Features
+│   │   │   ├── Set ID, Dorm ID, Amount
+│   │   │   ├── Set Purpose, Status, Payment Method
+│   │   │   ├── Set Date
+│   │   ├── Functions
+│   │   │   ├── AddPayment(): Creates payment record
+│   │   │   ├── Save(): Writes to DormPaymentsData.txt
+│   │   │   ├── GenerateRandomID(): Creates unique ID (clsUtil.h)
+│   │   ├── Validation: Ensures unique ID, valid inputs (clsInputValidate)
+│   │   ├── File: DormPaymentsData.txt
+├── [15] Add New Room
+│   ├── Features: Create new room record
+│   │   ├── Sub-Features
+│   │   │   ├── Set Dorm, Floor, Room Number
+│   │   │   ├── Set Capacity, Occupants, Status
+│   │   ├── Functions
+│   │   │   ├── AddRoom(): Creates room record
+│   │   │   ├── Save(): Writes to RoomsData.txt
+│   │   │   ├── GenerateRandomID(): Creates unique ID (clsUtil.h)
+│   │   ├── Validation: Ensures valid inputs (clsInputValidate)
+│   │   ├── File: RoomsData.txt
+├── [16] Add New Complaint
+│   ├── Features: Record new student complaint
+│   │   ├── Sub-Features
+│   │   │   ├── Set ID, Dorm ID, Room
+│   │   │   ├── Set Issue, Priority, Status
+│   │   │   ├── Set Date
+│   │   ├── Functions
+│   │   │   ├── AddComplaint(): Creates complaint record
+│   │   │   ├── Save(): Writes to StudentsDormComplaints.txt
+│   │   │   ├── GenerateRandomID(): Creates unique ID (clsUtil.h)
+│   │   ├── Validation: Ensures valid inputs (clsInputValidate)
+│   │   ├── File: StudentsDormComplaints.txt
+├── [17] Login
+│   ├── Features: Authenticate users with role-based access
+│   │   ├── Sub-Features
+│   │   │   ├── Enter Username/Password
+│   │   │   ├── Assign Role (admin, securitychief, financemanager, studentofficer)
+│   │   │   ├── Track Login Session
+│   │   ├── Functions
+│   │   │   ├── Find(): Authenticates user (clsLogin.h)
+│   │   │   ├── SaveLoginSession(): Logs to RegisterLogins.txt
+│   │   ├── Validation: Checks credentials (clsInputValidate)
+│   │   ├── File: LoginData.txt, RegisterLogins.txt
+├── [18] Logout
+│   ├── Features: End user session
+│   │   ├── Sub-Features
+│   │   │   ├── Record Logout Time
+│   │   │   ├── Clear CurrentUser
+│   │   ├── Functions
+│   │   │   ├── SaveLoginSession(): Updates RegisterLogins.txt (clsLogin.h)
+│   │   ├── File: RegisterLogins.txt
+└── [19] Exit
+    ├── Features: Save changes and exit program
+    │   ├── Sub-Features
+    │   │   ├── Save all modified records
+    │   │   ├── Clear console
+    │   ├── Functions
+    │   │   ├── Save(): Writes to respective data files
+    │   │   ├── ResetScreen(): Clears console (clsUtil.h)
+    │   ├── Files: All data files (*.txt)
 
 
