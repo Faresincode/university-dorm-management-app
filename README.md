@@ -39,14 +39,6 @@ Each screen is a class inheriting from `clsBase`, providing a consistent interfa
 
 ## Application Structure (Tree)
 
-# Dormitory Management System
-
-## Application Structure (Tree)
-
-# Dormitory Management System
-
-## Application Structure (Tree)
-
 ```plaintext
 Dormitory Management System
 ├── Main Menu
