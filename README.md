@@ -171,4 +171,4 @@ The application uses a menu-driven interface with the following screens, each im
 ## Installation
 - Clone the repository:
   ```bash
-  git clone https://github.com/your-username/dormitory-management-system.git
+  git clone https://github.com/Faresincode/university-dorm-management-app.git
