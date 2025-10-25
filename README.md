@@ -22,28 +22,28 @@ The following tables detail all features, including management screens, their me
 | **Room Management** | Manage room assignments and details | - AddRoom(): Creates new room<br>- UpdateRoom(): Modifies room details<br>- FindRoom(): Retrieves by dorm/floor/room<br>- Save(): Writes to file | N/A | `RoomsData.txt` |
 | **Utility Features** | Support functions for ID generation, validation, UI | - GenerateRandomID(): Creates unique IDs<br>- ReadFileLines(): Reads file data<br>- WriteFileLines(): Writes to file<br>- ResetScreen(): Clears console<br>- SetColor(): Applies colors (Green, White, Blue, Yellow, Red)<br>- ValidateInput(): Ensures valid inputs | N/A | N/A |
 
-<img width="600" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/2a690497a33dae7ba3204db0b2641b27dd528d90/images/manage-student-menu-screen.png" />
+<img width="700" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/2a690497a33dae7ba3204db0b2641b27dd528d90/images/manage-student-menu-screen.png" />
 
-<img width="600" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-employee-menu-screen.png" />
+<img width="700" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-employee-menu-screen.png" />
 
-<img width="600" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-finance-menu-screen.png" />
+<img width="700" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-finance-menu-screen.png" />
 
-<img width="600" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-rooms-menu-screen.png" />
+<img width="700" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-rooms-menu-screen.png" />
 
 
-<img width="600" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-security-menu-screen.png" />
+<img width="700" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-security-menu-screen.png" />
 
-<img width="600" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-incident-reports-screen.png" />
+<img width="700" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-incident-reports-screen.png" />
 
-<img width="600" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-patroles-schedules-screen.png" />
+<img width="700" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-patroles-schedules-screen.png" />
 
-<img width="600" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-visitor-log-screen.png" />
+<img width="700" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-visitor-log-screen.png" />
 
-<img width="600" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-maintenance-menu-screen.png" />
+<img width="700" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-maintenance-menu-screen.png" />
 
-<img width="600" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/full-reports-menu-screen.png" />
+<img width="700" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/full-reports-menu-screen.png" />
 
-<img width="600" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/login-registers-screen.png" />
+<img width="700" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/login-registers-screen.png" />
 
 
 ## Screen Structure
