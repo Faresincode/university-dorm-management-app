@@ -13,6 +13,9 @@ The following tables detail all features, including management screens, their me
 | **Feature Category** | **Description** | **Key Functions** | **Related Screen** | **Data File** |
 |----------------------|-----------------|-------------------|---------------------|---------------|
 | **Student Management** | Manage student records, academic details, complaints, and residency status | - AddStudent(): Creates new student record<br>- UpdateStudent(): Modifies existing record<br>- FindStudent(): Retrieves by ID<br>- Save(): Writes to file<br>- ReadComplaint(): Loads complaints | Update Dorm Student Screen | `StudentsDormData.txt`, `StudentsDormComplaints.txt` |
+![Manage Dorm Students Menu Screen](https://github.com/Faresincode/university-dorm-management-app/blob/2a690497a33dae7ba3204db0b2641b27dd528d90/images/manage-student-menu-screen.png)
+
+
 | **Employee Management** | Handle employee details, shifts, and security roles | - AddEmployee(): Creates new employee<br>- UpdateEmployee(): Modifies record<br>- FindEmployee(): Retrieves by ID<br>- Save(): Writes to file<br>- AssignShift(): Manages shifts | Update Employee Info Screen | `DormEmployeeData.txt`, `ShiftsSchedulesData.txt`, `SecuritiesData.txt` |
 | **Visitor Tracking** | Log and track visitor information, filter by criteria | - AddVisitor(): Creates new visitor<br>- UpdateVisitor(): Modifies record<br>- FindVisitor(): Retrieves by ID<br>- FilterByName/Dept/Date(): Filters logs<br>- Save(): Writes to file | Update Visitor Information Screen, Visitor Log List Screen | `VisitorsData.txt` |
 | **Patrol Scheduling** | Manage security patrol schedules, filter completed patrols | - AddPatrol(): Creates new schedule<br>- UpdatePatrol(): Modifies schedule<br>- FindPatrol(): Retrieves by ID<br>- FilterCompleted(): Shows completed patrols<br>- Save(): Writes to file | View All Patrol Schedules Screen, View Patrol Logs Screen | `PatrolSchedules.txt` |
