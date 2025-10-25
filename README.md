@@ -3,8 +3,7 @@
 The **Dormitory Management System** is a powerful C++ console-based application designed to streamline dormitory operations for university or residential administrators. It provides comprehensive management of students, employees, visitors, patrols, incidents, maintenance requests, payments, and rooms, with a modular design, robust input validation, and file-based data persistence using `#//#` separators. The system features a colorful, menu-driven console interface for enhanced usability.
 
 ## Features
-
-![Admin Panel Screen](https://github.com/Faresincode/university-dorm-management-app/blob/d2049f91475ffceae871bcfd9fc891601503b8df/images/admin-panel-screen.png)
+<img width="800" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/d2049f91475ffceae871bcfd9fc891601503b8df/images/admin-panel-screen.png" />
 
 
 
@@ -24,8 +23,7 @@ The following tables detail all features, including management screens, their me
 | **Utility Features** | Support functions for ID generation, validation, UI | - GenerateRandomID(): Creates unique IDs<br>- ReadFileLines(): Reads file data<br>- WriteFileLines(): Writes to file<br>- ResetScreen(): Clears console<br>- SetColor(): Applies colors (Green, White, Blue, Yellow, Red)<br>- ValidateInput(): Ensures valid inputs | N/A | N/A |
 
 ##Students management screens
-![Manage Dorm Students Menu Screen](https://github.com/Faresincode/university-dorm-management-app/blob/2a690497a33dae7ba3204db0b2641b27dd528d90/images/manage-student-menu-screen.png)
-
+<img width="800" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/2a690497a33dae7ba3204db0b2641b27dd528d90/images/manage-student-menu-screen.png" />
 
 ## Screen Structure
 
