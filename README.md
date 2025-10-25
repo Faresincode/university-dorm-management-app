@@ -3,9 +3,7 @@
 The **Dormitory Management System** is a powerful C++ console-based application designed to streamline dormitory operations for university or residential administrators. It provides comprehensive management of students, employees, visitors, patrols, incidents, maintenance requests, payments, and rooms, with a modular design, robust input validation, and file-based data persistence using `#//#` separators. The system features a colorful, menu-driven console interface for enhanced usability.
 
 ## Features
-<div style="text-align: center;">
 <img width="500" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/d2049f91475ffceae871bcfd9fc891601503b8df/images/admin-panel-screen.png" />
-</div>
 
 
 
