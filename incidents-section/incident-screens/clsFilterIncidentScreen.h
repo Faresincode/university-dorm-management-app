@@ -111,7 +111,7 @@ private:
         case eAll:
             _PrintFilteredIncidents(vIncidents);
             GoBackToFilterMenu();
-
+            break;
         case eExit:
             break;
 
@@ -142,5 +142,6 @@ public:
 
     }
 };
+
 
 
