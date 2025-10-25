@@ -4,7 +4,7 @@ The **Dormitory Management System** is a powerful C++ console-based application 
 
 ## Features
 
-![Admin Panel Screen]([https://raw.githubusercontent.com/username/repository/main/images/myphoto.png](https://github.com/Faresincode/university-dorm-management-app/blob/main/images/admin-panel-screen.png](https://github.com/Faresincode/university-dorm-management-app/blob/d2049f91475ffceae871bcfd9fc891601503b8df/images/admin-panel-screen.png))
+![Admin Panel Screen](https://github.com/Faresincode/university-dorm-management-app/blob/d2049f91475ffceae871bcfd9fc891601503b8df/images/admin-panel-screen.png)
 
 
 
