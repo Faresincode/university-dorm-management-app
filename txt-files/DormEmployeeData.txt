@@ -1,0 +1,9 @@
+EMP041#//#newyork#//#df#//#security#//#14778.000000#//#2025-2-14#//#2#//#3#//#James#//#Carter#//#77#//#1995-02-14#//#American#//#james.carter@email.com#//#+1555123456
+EMP003#//#ireyahen#//#Security#//#Security Tester#//#14578.000000#//#2025-10-12#//#2#//#0#//#Ahmed#//#Hassan#//#77#//#1988-04-30#//#Egyptian#//#ahmed.hassan@email.com#//#+201009887766
+EMP004#//#BlueWave Residence#//#Cleaning#//#Housekeeper#//#1600.750000#//#2023-03-15#//#0#//#0#//#Maria#//#Lopez#//#70#//#2002-10-20#//#Spanish#//#maria.lopez@email.com#//#+34123456789
+EMP005#//#CoralBay Dorm#//#Security#//#Electrician#//#1900.000000#//#2020-11-05#//#2#//#0#//#John#//#Peterson#//#77#//#2024-03-02#//#Swedish#//#john.peterson@email.com#//#+468556677
+EMP076#//#CoralBay Dorm#//#Administration#//#programmer#//#3000.000000#//#2025-10-10#//#0#//#0#//#Linda#//#Brown#//#70#//#2020-10-19#//#British#//#linda.brown@email.com#//#+447700900123
+EMP007#//#Seaside Hall#//#Security#//#Security Supervisor#//#2500.000000#//#2018-02-11#//#2#//#0#//#Omar#//#Ali#//#77#//#1984-11-08#//#Moroccan#//#omar.ali@email.com#//#+212612345678
+EMP008#//#Seaside Hall#//#Security#//#Janitor#//#1550.000000#//#2025-10-01#//#1#//#0#//#Fatima#//#Zahra#//#70#//#2007-10-14#//#Algerian#//#fatima.zahra@email.com#//#+213661112223
+EMP079#//#Security#//#Administration#//#Security guard#//#201245.000000#//#2025-10-16#//#3#//#1#//#Tom#//#Walker#//#77#//#1993-12-17#//#American#//#tom.walker@email.com#//#+1555011999
+EMP6434#//#barcelona#//#football club#//#footballer#//#487875.000000#//#2004-2-14#//#2#//#2#//#messi#//#lionel#//#77#//#1985-2-14#//#argentina#//#lionelmession@gmail.com#//#079874545454

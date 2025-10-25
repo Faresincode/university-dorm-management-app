@@ -1,0 +1,10 @@
+INC0001#//#SEC102#//#2025-10-22 08:45:00#//#Unauthorized Access#//#Unauthorized person entered restricted area via side door#//#3#//#1#//#2025-10-22 08:50:00
+INC0002#//#SEC205#//#2025-10-21 22:10:00#//#Fire Alarm#//#Smoke detected in warehouse sector B#//#3#//#2#//#2025-10-21 22:30:00
+INC0003#//#SEC304#//#2025-10-20 15:25:00#//#Suspicious Package#//#Package left unattended in lobby area#//#2#//#3#//#2025-10-20 16:00:00
+INC0004#//#SEC410#//#2025-10-19 03:15:00#//#System Breach#//#Multiple failed login attempts detected in server#//#3#//#2#//#2025-10-19 03:40:00
+INC0005#//#SEC512#//#2025-10-18 12:10:00#//#Lost Badge#//#Employee reported lost security badge#//#1#//#4#//#2025-10-18 12:25:00
+INC0006#//#SEC220#//#2025-10-22 10:00:00#//#Vandalism#//#Graffiti found on main entrance wall#//#2#//#1#//#2025-10-22 10:10:00
+INC0007#//#SEC345#//#2025-10-21 06:30:00#//#Camera Offline#//#Security camera disconnected from network#//#1#//#2#//#2025-10-21 06:45:00
+INC0008#//#SEC556#//#2025-10-20 18:55:00#//#Injury Report#//#Worker sustained minor injury in warehouse#//#2#//#3#//#2025-10-20 19:10:00
+INC0009#//#SEC478#//#2025-10-19 09:40:00#//#Unauthorized Login#//#Access attempt from unknown IP detected#//#3#//#1#//#2025-10-19 09:45:00
+INC0010#//#SEC667#//#2025-10-18 17:20:00#//#Missing Equipment#//#Security team reported missing handheld radio#//#1#//#4#//#2025-10-18 17:40:00
