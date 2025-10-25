@@ -22,7 +22,40 @@ The following tables detail all features, including management screens, their me
 | **Room Management** | Manage room assignments and details | - AddRoom(): Creates new room<br>- UpdateRoom(): Modifies room details<br>- FindRoom(): Retrieves by dorm/floor/room<br>- Save(): Writes to file | N/A | `RoomsData.txt` |
 | **Utility Features** | Support functions for ID generation, validation, UI | - GenerateRandomID(): Creates unique IDs<br>- ReadFileLines(): Reads file data<br>- WriteFileLines(): Writes to file<br>- ResetScreen(): Clears console<br>- SetColor(): Applies colors (Green, White, Blue, Yellow, Red)<br>- ValidateInput(): Ensures valid inputs | N/A | N/A |
 
+Manage Student Menu Screen
 <img width="800" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/2a690497a33dae7ba3204db0b2641b27dd528d90/images/manage-student-menu-screen.png" />
+
+Manage Employee Menu Screen
+<img width="800" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-employee-menu-screen.png" />
+
+Manage Finance Menu Screen
+<img width="800" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-finance-menu-screen.png" />
+
+Manage Rooms Menu Screen 
+<img width="800" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-rooms-menu-screen.png" />
+
+
+Manage Security Menu Screen
+<img width="800" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-security-menu-screen.png" />
+
+Manage Incident Reports Screen 
+<img width="800" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-incident-reports-screen.png" />
+
+Manage Patroles Schedules Screen 
+<img width="800" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-patroles-schedules-screen.png" />
+
+Manage Visitor Log Screen
+<img width="800" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-visitor-log-screen.png" />
+
+Manage Maintenance Menu Screen 
+<img width="800" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/manage-maintenance-menu-screen.png" />
+
+Full Reports Menu Screen
+<img width="800" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/full-reports-menu-screen.png" />
+
+Login Registers Screen
+<img width="800" height="400" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/login-registers-screen.png" />
+
 
 ## Screen Structure
 
@@ -39,8 +72,8 @@ Each screen is a class inheriting from `clsBase`, providing a consistent interfa
 | **View All Requests** | `clsViewAllRequestsScreen.h` | Display all maintenance requests | N/A (Table Display) | - ShowRequestsScreen(): Loads data<br>- PrintTable(): Formats table (Request ID, Dorm, Room, Issue Type, Priority, Status, Staff ID, Date) |
 | **Visitor Log List** | `clsVisitorLogListScreen.h` | Display all visitor logs | N/A (Table Display) | - ShowVisitorLogListScreen(): Loads data<br>- PrintTable(): Formats table (Visitor ID, Name, Purpose, Dept, Room, Status, Visit/Exit Time) |
 
+<img width="400" height="500" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/filter-visitor-logs-screen.png" />
 
-# Dormitory Management System
 
 ## Application Structure (Tree)
 
