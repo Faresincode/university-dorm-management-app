@@ -61,8 +61,6 @@ Each screen is a class inheriting from `clsBase`, providing a consistent interfa
 | **View All Requests** | `clsViewAllRequestsScreen.h` | Display all maintenance requests | N/A (Table Display) | - ShowRequestsScreen(): Loads data<br>- PrintTable(): Formats table (Request ID, Dorm, Room, Issue Type, Priority, Status, Staff ID, Date) |
 | **Visitor Log List** | `clsVisitorLogListScreen.h` | Display all visitor logs | N/A (Table Display) | - ShowVisitorLogListScreen(): Loads data<br>- PrintTable(): Formats table (Visitor ID, Name, Purpose, Dept, Room, Status, Visit/Exit Time) |
 
-<img width="400" height="500" alt="client-list-screnn" src="https://github.com/Faresincode/university-dorm-management-app/blob/262d68e1149603f9bfc73b0d4c0edd67b893ceb1/images/filter-visitor-logs-screen.png" />
-
 
 ## Application Structure (Tree)
 
